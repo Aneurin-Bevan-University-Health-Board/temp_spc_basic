@@ -1,0 +1,31 @@
+{
+  "name": "SPC Basic",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb"
+  },
+  "postCreateCommand": "PIP_CONFIG_FILE=pip.conf pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-toolsai.jupyter",
+        "ms-python.flake8"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        }
+      }
+    }
+  },
+  "forwardPorts": [8888],
+  "remoteEnv": {
+    "PYTHONPATH": "${containerWorkspaceFolder}/src",
+    "PIP_CONFIG_FILE": "${containerWorkspaceFolder}/pip.conf"
+  }
+}
