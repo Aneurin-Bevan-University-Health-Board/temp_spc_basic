@@ -1,0 +1,20 @@
+# SPC — from Test PyPI (see install instructions in README)
+# Run: pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ abspc
+# abspc is listed below but pip install -r will NOT pull from test.pypi automatically.
+# Use the command above, or a pip.conf / UV source config.
+abspc
+
+# Excel
+openpyxl>=3.1.0
+
+# Data
+pandas>=2.0.0
+numpy>=1.26.0
+
+# Visualisation
+matplotlib>=3.8.0
+
+# Dev
+pytest>=7.4.0
+python-dotenv>=1.0.0
+jupyterlab>=4.0.0

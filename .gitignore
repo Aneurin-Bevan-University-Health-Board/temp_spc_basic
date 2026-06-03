@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Env
+.env
+*.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# DATA FILES — never commit patient or sensitive data
+data/input/*
+data/output/*
+!data/input/.gitkeep
+!data/output/.gitkeep
+
+# Excel / spreadsheet files — anywhere in the repo
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+
+# CSV / tabular data
+*.csv
+*.tsv
+
+# Parquet / feather / other columnar formats
+*.parquet
+*.feather
+*.arrow
+
+# Sensitive file patterns
+*patient*
+*sensitive*
+*identifiable*
+*pii*
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
